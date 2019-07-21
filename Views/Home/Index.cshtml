@@ -1,16 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<form asp-action="Criar" method="post">
-    <label for="Nome">Nome</label>
-    <input type="text" name="Nome"/>
-
-    <label for="Idade">Idade</label>
-    <input type="number" name="Idade"/>
-
-    <label for="Data">Data</label>
-    <input type="date" name="Data"/>
-    <button type="submit">Enviar</button>
-</form>
-
+﻿<html>
+    <head></head>
+    <body>
+        <main>
+            <form asp-action="Criar" method="post">
+                <div>
+                    <label for="Nome">Nome</label>
+                    <input type="text" name="Nome"/>
+                </div>
+                <div>
+                    <label for="Idade">Idade</label>
+                    <input type="number" name="Idade"/>
+                </div>
+                <div>
+                    <label for="Data">Data</label>
+                    <input type="date" name="Data"/>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </body>
+</html>

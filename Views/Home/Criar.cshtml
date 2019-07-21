@@ -1,21 +1,30 @@
 @model List<Pessoa>;
-<style> 
-table, th, td {
-  border: 1px solid black;
-}
-</style>
-<table>
-    <tr>
-        <th>Nome</th>
-        <th>Idade</th>
-        <th>Data</th>
-    </tr>
-    @foreach (var p in Model)
-    {
-        <tr>
-            <td> @p.Nome </td>
-            <td> @p.Idade </td>
-            <td> @p.Data </td>
-        </tr>
-    }
-</table>
+<html>
+    <head>
+        <style> 
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Data</th>
+                </tr>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td> @p.Nome </td>
+                        <td> @p.Idade </td>
+                        <td> @p.Data </td>
+                    </tr>
+                }
+            </table>
+            <a asp-action="Index">Home</a>
+        </main>
+    </body>
+</html>
