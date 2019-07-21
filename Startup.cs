@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrudRapido
 {
@@ -33,9 +34,15 @@ namespace CrudRapido
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            string connectionString = Configuration.GetConnectionString("Default");
+            services.AddDbContext<ApplicationContext>((DbContextOptionsBuilder options) =>
+                options.UseSqlServer(connectionString)
+            );
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
+            IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -57,6 +64,10 @@ namespace CrudRapido
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            serviceProvider.GetService<ApplicationContext>()
+                .Database
+                .EnsureCreated();
         }
     }
 }
