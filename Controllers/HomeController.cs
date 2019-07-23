@@ -10,6 +10,13 @@ namespace CrudRapido.Controllers
 {
     public class HomeController : Controller
     {
+        protected readonly ApplicationContext contexto;
+
+        public HomeController(ApplicationContext contexto)
+        {
+            this.contexto = contexto;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -17,8 +24,10 @@ namespace CrudRapido.Controllers
 
         public IActionResult Criar(Pessoa pessoa)
         {
-            var pessoas = new List<Pessoa>();
-            pessoas.Add(pessoa);
+            contexto.Set<Pessoa>().Add(pessoa);
+            contexto.SaveChanges();
+            List<Pessoa> pessoas = contexto.Set<Pessoa>().ToList();
+
             return View(pessoas);
         }
 
