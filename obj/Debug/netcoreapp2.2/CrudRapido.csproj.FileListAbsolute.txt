@@ -24,3 +24,6 @@
 /media/vitor/Future/Documents/c#/CrudRapido/obj/Debug/netcoreapp2.2/CrudRapido.Views.pdb
 /media/vitor/Future/Documents/c#/CrudRapido/obj/Debug/netcoreapp2.2/CrudRapido.csproj.CopyComplete
 /media/vitor/Future/Documents/c#/CrudRapido/obj/Debug/netcoreapp2.2/Razor/Views/Home/Criar.g.cshtml.cs
+/media/vitor/Future/Documents/c#/CrudRapido/obj/Debug/netcoreapp2.2/Razor/Views/Home/Remove.g.cshtml.cs
+/media/vitor/Future/Documents/c#/CrudRapido/obj/Debug/netcoreapp2.2/Razor/Views/Home/Update.g.cshtml.cs
+/media/vitor/Future/Documents/c#/CrudRapido/obj/Debug/netcoreapp2.2/Razor/Views/Home/Select.g.cshtml.cs

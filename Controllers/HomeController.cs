@@ -31,6 +31,29 @@ namespace CrudRapido.Controllers
             return View(pessoas);
         }
 
+        public IActionResult Update(Pessoa pessoa)
+        {
+            contexto.Set<Pessoa>().Update(pessoa);
+            contexto.SaveChanges();
+
+            return View(pessoa);
+        }
+
+        public IActionResult Remove(Pessoa pessoa)
+        {
+            contexto.Set<Pessoa>().Remove(pessoa);
+            contexto.SaveChanges();
+
+            return View(pessoa);
+        }
+
+        public IActionResult Select(Pessoa pessoa)
+        {
+            var pessoal = contexto.Set<Pessoa>().Find(pessoa.Id);
+
+            return View(pessoal);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

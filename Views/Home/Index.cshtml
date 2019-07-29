@@ -2,10 +2,10 @@
     <head></head>
     <body>
         <main>
-            <form asp-action="Criar" method="post">
+            <form method="post">
                 <div>
                     <label for="Id">Id</label>
-                    <input type="text" name="Id" disabled/>
+                    <input type="text" name="Id"/>
                 </div>
                 <div>
                     <label for="Nome">Nome</label>
@@ -19,7 +19,10 @@
                     <label for="Data">Data</label>
                     <input type="date" name="Data"/>
                 </div>
-                <button type="submit">Enviar</button>
+                <button type="submit" asp-controller="Home" asp-action="Criar">Criar</button>
+                <button type="submit" asp-controller="Home" asp-action="Select">Select</button>
+                <button type="submit" asp-controller="Home" asp-action="Remove">Remove</button>
+                <button type="submit" asp-controller="Home" asp-action="Update">Update</button>
             </form>
         </main>
     </body>

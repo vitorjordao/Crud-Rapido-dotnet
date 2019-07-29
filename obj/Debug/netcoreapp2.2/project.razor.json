@@ -2961,6 +2961,21 @@
       "FilePath": "Views/Shared/Error.cshtml",
       "TargetPath": "Views/Shared/Error.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Home/Remove.cshtml",
+      "TargetPath": "Views/Home/Remove.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Home/Update.cshtml",
+      "TargetPath": "Views/Home/Update.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Home/Select.cshtml",
+      "TargetPath": "Views/Home/Select.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.1"
